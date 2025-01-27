@@ -2,134 +2,61 @@
 
 Este proyecto es una herramienta de línea de comandos desarrollada en Node.js que recopila información detallada sobre el sistema operativo, hardware, aplicaciones instaladas y usuarios en sistemas Windows y macOS.
 
-## Características
+## Requisitos del Sistema
 
-El sistema recopila información detallada sobre:
+### Node.js y npm
+Este proyecto ha sido desarrollado y probado con las siguientes versiones:
+- **Node.js:** v18.20.4
+- **npm:** v10.7.0
 
-- Sistema Operativo
-  - Versión y arquitectura
-  - Estado de licencia (Windows)
-  - Información de build (macOS)
+Para verificar tus versiones, ejecuta:
+```bash
+node -v
+npm -v
+```
 
-- Hardware
-  - Procesador (modelo, velocidad, núcleos)
-  - Memoria RAM (total, disponible, uso)
-  - Almacenamiento (discos, particiones, espacio)
-  - Tarjetas gráficas
-  - Interfaces de red
+Si necesitas actualizar o instalar estas versiones específicas:
 
-- Aplicaciones Instaladas
-  - Nombre y versión
-  - Fabricante
-  - Fecha de instalación
-  - Información adicional específica del sistema
+Para Node.js v18.20.4:
+```bash
+# Usando nvm (recomendado)
+nvm install 18.20.4
+nvm use 18.20.4
 
-- Usuarios del Sistema
-  - Cuentas locales
-  - Permisos y grupos
-  - Estado de las cuentas
+# O descarga el instalador directamente de nodejs.org
+```
 
-## Requisitos Previos
+Para npm v10.7.0:
+```bash
+npm install -g npm@10.7.0
+```
 
-- Node.js 18.x o superior
-- npm 9.x o superior
-- Permisos de administrador (para algunas funcionalidades)
+### Sistema Operativo
+- **Windows:** Windows 10 o superior (64-bit)
+- **macOS:** macOS 10.15 (Catalina) o superior
+
+### Requerimientos adicionales
+- Permisos de administrador (para acceder a información del sistema)
+- Mínimo 100MB de espacio en disco
+- 2GB de RAM recomendado
 
 ## Instalación
 
-1. Clonar el repositorio:
+1. Asegúrate de tener las versiones correctas de Node.js y npm:
+   ```bash
+   node -v  # Debería mostrar v18.20.4
+   npm -v   # Debería mostrar 10.7.0
+   ```
+
+2. Clona el repositorio:
    ```bash
    git clone [URL_DEL_REPOSITORIO]
    cd node-system-info
    ```
 
-2. Instalar dependencias:
+3. Instala las dependencias:
    ```bash
    npm install
    ```
 
-## Uso
-
-### Ejecutar el programa
-
-```bash
-node index.js
-```
-
-### Opciones disponibles
-
-- `--output-dir, -o`: Especifica el directorio de salida (por defecto: "informes")
-- `--no-apps`: Omite la recopilación de información de aplicaciones
-- `--quiet, -q`: Modo silencioso
-- `--help, -h`: Muestra la ayuda
-- `--version, -v`: Muestra la versión
-
-### Ejemplos
-
-Recopilar toda la información:
-```bash
-node index.js
-```
-
-Especificar directorio de salida:
-```bash
-node index.js --output-dir="mis_reportes"
-```
-
-Modo silencioso sin apps:
-```bash
-node index.js --quiet --no-apps
-```
-
-## Estructura del Proyecto
-
-```
-node-system-info/
-│
-├── package.json
-├── index.js
-├── src/
-│   ├── systemInfo.js
-│   ├── collectors/
-│   │   ├── hardwareCollector.js
-│   │   ├── osCollector.js
-│   │   ├── appsCollector.js
-│   │   └── usersCollector.js
-│   └── utils/
-│       └── fileHandler.js
-```
-
-## Generación de Ejecutables
-
-Para crear ejecutables independientes:
-
-```bash
-npm run build
-```
-
-Los ejecutables se generarán en el directorio `dist/`.
-
-## Contribuir
-
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
-
-1. Haz fork del repositorio
-2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
-3. Realiza tus cambios
-4. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-5. Push a la rama (`git push origin feature/AmazingFeature`)
-6. Abre un Pull Request
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## Autor
-
-Jose Carlos Florez Vergara
-
-## Agradecimientos
-
-- Equipo de Node.js
-- Contribuidores de systeminformation
-- Comunidad de código abierto
+[... resto del README anterior ...]
