@@ -50,7 +50,7 @@ npm install -g npm@10.7.0
 
 2. Clona el repositorio:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/aryeteinc/get_info_machine.git
    cd node-system-info
    ```
 
