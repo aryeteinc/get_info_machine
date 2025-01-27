@@ -1,0 +1,26 @@
+{
+  "name": "node-system-info",
+  "version": "1.0.0",
+  "description": "Recopilador de información del sistema en Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "targets": [
+      "node18-win-x64",
+      "node18-macos-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "systeminformation": "^5.21.7",
+    "registry-js": "^1.15.1",
+    "winston": "^3.10.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
